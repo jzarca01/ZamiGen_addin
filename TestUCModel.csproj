@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FA43BEAD-F06E-412F-904F-01ED3D1E6491}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestUCModel</RootNamespace>
+    <AssemblyName>TestUCModel</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>true</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.EA">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Sparx Systems\EA\Interop.EA.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions\BasicActions\Action.cs" />
+    <Compile Include="Actions\BasicActions\CallAction.cs" />
+    <Compile Include="Actions\BasicActions\CallBehaviorAction.cs" />
+    <Compile Include="Actions\BasicActions\CallOperationAction.cs" />
+    <Compile Include="Actions\BasicActions\InputPin.cs" />
+    <Compile Include="Actions\BasicActions\InvocationAction.cs" />
+    <Compile Include="Actions\BasicActions\MultiplicityElement.cs" />
+    <Compile Include="Actions\BasicActions\OpaqueAction.cs" />
+    <Compile Include="Actions\BasicActions\OutputPin.cs" />
+    <Compile Include="Actions\BasicActions\Pin.cs" />
+    <Compile Include="Actions\BasicActions\SendSignalAction.cs" />
+    <Compile Include="Actions\BasicActions\ValuePin.cs" />
+    <Compile Include="Activities\FundamentalActivities\Action.cs" />
+    <Compile Include="Activities\FundamentalActivities\Activity.cs" />
+    <Compile Include="Activities\FundamentalActivities\ActivityGroup.cs" />
+    <Compile Include="Activities\FundamentalActivities\ActivityNode.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Classes\Dependencies\Abstraction.cs" />
+    <Compile Include="Classes\Dependencies\Dependency.cs" />
+    <Compile Include="Classes\Dependencies\Realization.cs" />
+    <Compile Include="Classes\Dependencies\Substitution.cs" />
+    <Compile Include="Classes\Dependencies\Usage.cs" />
+    <Compile Include="Classes\Interfaces\BehavioredClassifier.cs" />
+    <Compile Include="Classes\Interfaces\Interface.cs" />
+    <Compile Include="Classes\Interfaces\InterfaceRealization.cs" />
+    <Compile Include="Classes\Kernel\AggregationKind.cs" />
+    <Compile Include="Classes\Kernel\Association.cs" />
+    <Compile Include="Classes\Kernel\BehavioralFeature.cs" />
+    <Compile Include="Classes\Kernel\Class.cs" />
+    <Compile Include="Classes\Kernel\Classifier.cs" />
+    <Compile Include="Classes\Kernel\Comment.cs" />
+    <Compile Include="Classes\Kernel\Constraint.cs" />
+    <Compile Include="Classes\Kernel\DataType.cs" />
+    <Compile Include="Classes\Kernel\DirectedRelationship.cs" />
+    <Compile Include="Classes\Kernel\Element.cs" />
+    <Compile Include="Classes\Kernel\ElementImport.cs" />
+    <Compile Include="Classes\Kernel\Enumeration.cs" />
+    <Compile Include="Classes\Kernel\EnumerationLiteral.cs" />
+    <Compile Include="Classes\Kernel\Expression.cs" />
+    <Compile Include="Classes\Kernel\Feature.cs" />
+    <Compile Include="Classes\Kernel\Generalization.cs" />
+    <Compile Include="Classes\Kernel\InstanceSpecification.cs" />
+    <Compile Include="Classes\Kernel\InstanceValue.cs" />
+    <Compile Include="Classes\Kernel\LiteralBoolean.cs" />
+    <Compile Include="Classes\Kernel\LiteralInteger.cs" />
+    <Compile Include="Classes\Kernel\LiteralNull.cs" />
+    <Compile Include="Classes\Kernel\LiteralSpecification.cs" />
+    <Compile Include="Classes\Kernel\LiteralString.cs" />
+    <Compile Include="Classes\Kernel\LiteralUnlimitedNatural.cs" />
+    <Compile Include="Classes\Kernel\MultiplicityElement.cs" />
+    <Compile Include="Classes\Kernel\NamedElement.cs" />
+    <Compile Include="Classes\Kernel\Namespace.cs" />
+    <Compile Include="Classes\Kernel\OpaqueExpression.cs" />
+    <Compile Include="Classes\Kernel\Operation.cs" />
+    <Compile Include="Classes\Kernel\Package.cs" />
+    <Compile Include="Classes\Kernel\PackageableElement.cs" />
+    <Compile Include="Classes\Kernel\PackageImport.cs" />
+    <Compile Include="Classes\Kernel\PackageMerge.cs" />
+    <Compile Include="Classes\Kernel\Parameter.cs" />
+    <Compile Include="Classes\Kernel\ParameterDirectionKind.cs" />
+    <Compile Include="Classes\Kernel\PrimitiveType.cs" />
+    <Compile Include="Classes\Kernel\Property.cs" />
+    <Compile Include="Classes\Kernel\RedefinableElement.cs" />
+    <Compile Include="Classes\Kernel\Relationship.cs" />
+    <Compile Include="Classes\Kernel\Slot.cs" />
+    <Compile Include="Classes\Kernel\StructuralFeature.cs" />
+    <Compile Include="Classes\Kernel\Type.cs" />
+    <Compile Include="Classes\Kernel\TypedElement.cs" />
+    <Compile Include="Classes\Kernel\UnlimitedNatural.cs" />
+    <Compile Include="Classes\Kernel\ValueSpecification.cs" />
+    <Compile Include="Classes\Kernel\VisibilityKind.cs" />
+    <Compile Include="CommonBehaviors\BasicBehaviors\Behavior.cs" />
+    <Compile Include="CommonBehaviors\BasicBehaviors\BehavioralFeature.cs" />
+    <Compile Include="CommonBehaviors\BasicBehaviors\BehavioredClassifier.cs" />
+    <Compile Include="CommonBehaviors\BasicBehaviors\FunctionBehavior.cs" />
+    <Compile Include="CommonBehaviors\BasicBehaviors\OpaqueBehavior.cs" />
+    <Compile Include="CommonBehaviors\BasicBehaviors\OpaqueExpression.cs" />
+    <Compile Include="CommonBehaviors\Communications\AnyReceiveEvent.cs" />
+    <Compile Include="CommonBehaviors\Communications\BehavioralFeature.cs" />
+    <Compile Include="CommonBehaviors\Communications\BehavioredClassifier.cs" />
+    <Compile Include="CommonBehaviors\Communications\CallConcurrencyKind.cs" />
+    <Compile Include="CommonBehaviors\Communications\CallEvent.cs" />
+    <Compile Include="CommonBehaviors\Communications\ChangeEvent.cs" />
+    <Compile Include="CommonBehaviors\Communications\Class.cs" />
+    <Compile Include="CommonBehaviors\Communications\Event.cs" />
+    <Compile Include="CommonBehaviors\Communications\Interface.cs" />
+    <Compile Include="CommonBehaviors\Communications\MessageEvent.cs" />
+    <Compile Include="CommonBehaviors\Communications\Operation.cs" />
+    <Compile Include="CommonBehaviors\Communications\Reception.cs" />
+    <Compile Include="CommonBehaviors\Communications\Signal.cs" />
+    <Compile Include="CommonBehaviors\Communications\SignalEvent.cs" />
+    <Compile Include="CommonBehaviors\Communications\Trigger.cs" />
+    <Compile Include="CompositeStructures\InternalStructures\Classifier.cs" />
+    <Compile Include="CompositeStructures\InternalStructures\ConnectableElement.cs" />
+    <Compile Include="CompositeStructures\InternalStructures\Connector.cs" />
+    <Compile Include="CompositeStructures\InternalStructures\ConnectorEnd.cs" />
+    <Compile Include="CompositeStructures\InternalStructures\Property.cs" />
+    <Compile Include="CompositeStructures\InternalStructures\StructuredClassifier.cs" />
+    <Compile Include="Diagrams\ActivityDiagram.cs" />
+    <Compile Include="Diagrams\BehaviorDiagram.cs" />
+    <Compile Include="Diagrams\ClassDiagram.cs" />
+    <Compile Include="Diagrams\CommunicationDiagram.cs" />
+    <Compile Include="Diagrams\ComponentDiagram.cs" />
+    <Compile Include="Diagrams\CompositeStructureDiagram.cs" />
+    <Compile Include="Diagrams\DeploymentDiagram.cs" />
+    <Compile Include="Diagrams\Diagram.cs" />
+    <Compile Include="Diagrams\DiagramElement.cs" />
+    <Compile Include="Diagrams\InterActionDiagram.cs" />
+    <Compile Include="Diagrams\InteractionOverviewDiagram.cs" />
+    <Compile Include="Diagrams\ObjectDiagram.cs" />
+    <Compile Include="Diagrams\PackageDiagram.cs" />
+    <Compile Include="Diagrams\ProfileDiagram.cs" />
+    <Compile Include="Diagrams\SequenceDiagram.cs" />
+    <Compile Include="Diagrams\StateMachineDiagram.cs" />
+    <Compile Include="Diagrams\StructureDiagram.cs" />
+    <Compile Include="Diagrams\TimingDiagram.cs" />
+    <Compile Include="Diagrams\UseCaseDiagram.cs" />
+    <Compile Include="EAAddinBase.cs" />
+    <Compile Include="EASpecific\EAAddin.cs" />
+    <Compile Include="EASpecific\User.cs" />
+    <Compile Include="EASpecific\WorkingSet.cs" />
+    <Compile Include="EAWrappers\Action.cs" />
+    <Compile Include="EAWrappers\Activity.cs" />
+    <Compile Include="EAWrappers\ActivityDiagram.cs" />
+    <Compile Include="EAWrappers\AggregationKind.cs" />
+    <Compile Include="EAWrappers\Association.cs" />
+    <Compile Include="EAWrappers\AssociationEnd.cs" />
+    <Compile Include="EAWrappers\Attribute.cs" />
+    <Compile Include="EAWrappers\AttributeTag.cs" />
+    <Compile Include="EAWrappers\BehaviorStateMachines\Event.cs" />
+    <Compile Include="EAWrappers\BehaviorStateMachines\FinalState.cs" />
+    <Compile Include="EAWrappers\BehaviorStateMachines\PseudoState.cs" />
+    <Compile Include="EAWrappers\BehaviorStateMachines\Region.cs" />
+    <Compile Include="EAWrappers\BehaviorStateMachines\State.cs" />
+    <Compile Include="EAWrappers\BehaviorStateMachines\StateMachine.cs" />
+    <Compile Include="EAWrappers\BehaviorStateMachines\Transition.cs" />
+    <Compile Include="EAWrappers\BehaviorStateMachines\Trigger.cs" />
+    <Compile Include="EAWrappers\BehaviorStateMachines\Vertex.cs" />
+    <Compile Include="EAWrappers\CallOperationAction.cs" />
+    <Compile Include="EAWrappers\Class.cs" />
+    <Compile Include="EAWrappers\ClassDiagram.cs" />
+    <Compile Include="EAWrappers\CommunicationDiagram.cs" />
+    <Compile Include="EAWrappers\ComponentDiagram.cs" />
+    <Compile Include="EAWrappers\CompositeStructureDiagram.cs" />
+    <Compile Include="EAWrappers\ConnectorWrapper.cs" />
+    <Compile Include="EAWrappers\DataType.cs" />
+    <Compile Include="EAWrappers\Dependency.cs" />
+    <Compile Include="EAWrappers\DeploymentDiagram.cs" />
+    <Compile Include="EAWrappers\DescriptionComment.cs" />
+    <Compile Include="EAWrappers\Diagram.cs" />
+    <Compile Include="EAWrappers\DiagramLinkWrapper.cs" />
+    <Compile Include="EAWrappers\DiagramObjectWrapper.cs" />
+    <Compile Include="EAWrappers\Element.cs" />
+    <Compile Include="EAWrappers\ElementTag.cs" />
+    <Compile Include="EAWrappers\ElementWrapper.cs" />
+    <Compile Include="EAWrappers\Enumeration.cs" />
+    <Compile Include="EAWrappers\Factory.cs" />
+    <Compile Include="EAWrappers\Generalization.cs" />
+    <Compile Include="EAWrappers\Interaction.cs" />
+    <Compile Include="EAWrappers\InteractionOverviewDiagram.cs" />
+    <Compile Include="EAWrappers\Interface.cs" />
+    <Compile Include="EAWrappers\InterfaceRealization.cs" />
+    <Compile Include="EAWrappers\Message.cs" />
+    <Compile Include="EAWrappers\Model.cs" />
+    <Compile Include="EAWrappers\NoteComment.cs" />
+    <Compile Include="EAWrappers\ObjectDiagram.cs" />
+    <Compile Include="EAWrappers\Operation.cs" />
+    <Compile Include="EAWrappers\OperationTag.cs" />
+    <Compile Include="EAWrappers\Package.cs" />
+    <Compile Include="EAWrappers\PackageDiagram.cs" />
+    <Compile Include="EAWrappers\Parameter.cs" />
+    <Compile Include="EAWrappers\ParameterDirectionKind.cs" />
+    <Compile Include="EAWrappers\ParameterReturnType.cs" />
+    <Compile Include="EAWrappers\ParameterTag.cs" />
+    <Compile Include="EAWrappers\ParameterWrapper.cs" />
+    <Compile Include="EAWrappers\PrimitiveType.cs" />
+    <Compile Include="EAWrappers\ProfileDiagram.cs" />
+    <Compile Include="EAWrappers\Realization.cs" />
+    <Compile Include="EAWrappers\RelationTag.cs" />
+    <Compile Include="EAWrappers\RepositoryType.cs" />
+    <Compile Include="EAWrappers\RootPackage.cs" />
+    <Compile Include="EAWrappers\SequenceDiagram.cs" />
+    <Compile Include="EAWrappers\StateMachineDiagram.cs" />
+    <Compile Include="EAWrappers\Stereotype.cs" />
+    <Compile Include="EAWrappers\TaggedValue.cs" />
+    <Compile Include="EAWrappers\TimingDiagram.cs" />
+    <Compile Include="EAWrappers\UseCaseDiagram.cs" />
+    <Compile Include="EAWrappers\VisibilityKind.cs" />
+    <Compile Include="EAWrappers\WindowWrapper.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form10.Designer.cs">
+      <DependentUpon>Form10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5.Designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6.Designer.cs">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form7.Designer.cs">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form8.Designer.cs">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form9.Designer.cs">
+      <DependentUpon>Form9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interactions\BasicInteractions\ActionExecutionSpecification.cs" />
+    <Compile Include="Interactions\BasicInteractions\BehaviorExecutionSpecification.cs" />
+    <Compile Include="Interactions\BasicInteractions\CreationEvent.cs" />
+    <Compile Include="Interactions\BasicInteractions\DestructionEvent.cs" />
+    <Compile Include="Interactions\BasicInteractions\ExecutionEvent.cs" />
+    <Compile Include="Interactions\BasicInteractions\ExecutionOccurrenceSpecification.cs" />
+    <Compile Include="Interactions\BasicInteractions\ExecutionSpecification.cs" />
+    <Compile Include="Interactions\BasicInteractions\GeneralOrdering.cs" />
+    <Compile Include="Interactions\BasicInteractions\Interaction.cs" />
+    <Compile Include="Interactions\BasicInteractions\InteractionFragment.cs" />
+    <Compile Include="Interactions\BasicInteractions\Lifeline.cs" />
+    <Compile Include="Interactions\BasicInteractions\Message.cs" />
+    <Compile Include="Interactions\BasicInteractions\MessageEnd.cs" />
+    <Compile Include="Interactions\BasicInteractions\MessageKind.cs" />
+    <Compile Include="Interactions\BasicInteractions\MessageOccurrenceSpecification.cs" />
+    <Compile Include="Interactions\BasicInteractions\MessageSort.cs" />
+    <Compile Include="Interactions\BasicInteractions\OccurrenceSpecification.cs" />
+    <Compile Include="Interactions\BasicInteractions\ReceiveOperationEvent.cs" />
+    <Compile Include="Interactions\BasicInteractions\ReceiveSignalEvent.cs" />
+    <Compile Include="Interactions\BasicInteractions\SendOperationEvent.cs" />
+    <Compile Include="Interactions\BasicInteractions\SendSignalEvent.cs" />
+    <Compile Include="Interactions\BasicInteractions\StateInvariant.cs" />
+    <Compile Include="Interactions\Fragments\CombinedFragment.cs" />
+    <Compile Include="Interactions\Fragments\ConsiderIgnoreFragment.cs" />
+    <Compile Include="Interactions\Fragments\Continuation.cs" />
+    <Compile Include="Interactions\Fragments\Gate.cs" />
+    <Compile Include="Interactions\Fragments\Interaction.cs" />
+    <Compile Include="Interactions\Fragments\InteractionConstraint.cs" />
+    <Compile Include="Interactions\Fragments\InteractionFragment.cs" />
+    <Compile Include="Interactions\Fragments\InteractionOperand.cs" />
+    <Compile Include="Interactions\Fragments\InteractionOperatorKind.cs" />
+    <Compile Include="Interactions\Fragments\InteractionUse.cs" />
+    <Compile Include="Interactions\Fragments\Lifeline.cs" />
+    <Compile Include="Interactions\Fragments\PartDecomposition.cs" />
+    <Compile Include="Profiles\Stereotype.cs" />
+    <Compile Include="Profiles\TaggedValue.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StateMachines\BehaviorStateMachines\ConnectionPointReference.cs" />
+    <Compile Include="StateMachines\BehaviorStateMachines\FinalState.cs" />
+    <Compile Include="StateMachines\BehaviorStateMachines\Pseudostate.cs" />
+    <Compile Include="StateMachines\BehaviorStateMachines\PseudostateKind.cs" />
+    <Compile Include="StateMachines\BehaviorStateMachines\Region.cs" />
+    <Compile Include="StateMachines\BehaviorStateMachines\State.cs" />
+    <Compile Include="StateMachines\BehaviorStateMachines\StateMachine.cs" />
+    <Compile Include="StateMachines\BehaviorStateMachines\TimeEvent.cs" />
+    <Compile Include="StateMachines\BehaviorStateMachines\Transition.cs" />
+    <Compile Include="StateMachines\BehaviorStateMachines\TransitionKind.cs" />
+    <Compile Include="StateMachines\BehaviorStateMachines\Vertex.cs" />
+    <Compile Include="UMLFactory.cs" />
+    <Compile Include="UMLItem.cs" />
+    <Compile Include="UMLModel.cs" />
+    <Compile Include="Utilities\AbortableBackgroundWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utilities\Logger.cs" />
+    <Compile Include="Utilities\TransformationILWriter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form10.resx">
+      <DependentUpon>Form10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form6.resx">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form7.resx">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form8.resx">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form9.resx">
+      <DependentUpon>Form9.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
